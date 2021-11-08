@@ -1,0 +1,123 @@
+:root{
+    --bg-b-1:#111;
+    --bg-b-2: #222;
+    --bg-b-3:#000;
+    --fc-primary:#f4f4f4;
+    --ff-primary:'Source Sans Pro',sans-serif;
+    --fw-primary:800;
+    --lh-primary:1.4;
+    --bg-secondary:gold;
+    --bg-btn:crimson;
+
+  
+
+}
+*,*::before,*::after{
+    box-sizing:border-box;
+}
+
+/* mobile first css */
+body{
+    min-height:100vh;
+    margin:0;
+    background:linear-gradient(to right, var(--bg-b-1),var(--bg-b-2),var(--bg-b-3));
+    font-family:var(--ff-primary);
+    font-weight:var(--fw-primary);
+
+
+}
+.confetti{
+    background-image:url('gif.gif');
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    filter:invert(100%);
+    z-index:-1;
+    opacity:0.4;
+   display:none;
+
+}
+
+
+.wrapper{
+    color:var(--fc-primary);
+    padding:4em 1em;
+
+}
+.container{
+    margin:4em auto;
+    width:min(80%,1250px);
+}
+.title{
+    text-align:center;
+   
+}
+#game{
+    background:var(--fc-primary);
+    padding:2em 3em;
+    color:var(--bg-b-3);
+    max-width:600px;
+    margin:2em auto;
+    border-radius:0.3em;
+    box-shadow:inset  0 0 3px 5px var(--bg-secondary);
+}
+#game input{
+    padding:0.75em;
+    border-radius:0.4em;
+    
+    border:0;
+    font-size:0.9rem;
+   
+}
+#game > div{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+   
+}
+.input{
+    outline:1px solid var(--bg-b-2);
+    flex-grow:2;
+    min-width:100px;
+}
+.game__title{
+    font-size:clamp(1rem, 5vw,1.3rem);
+    line-height:var(--lh-primary);
+}
+#btn{
+    display:inline-block;
+    font-family:var(--ff-primary);
+    background:var(--bg-btn);
+    outline:none;
+    color:var(--fc-primary);
+    font-weight:var(--fw-primary);
+    text-transform:uppercase;
+    flex-grow:1;
+    cursor:pointer;
+    letter-spacing:3px;
+    transition:opacity 250ms ease-in;
+   
+}
+#btn:hover{
+    opacity:0.8;
+}
+.congrats__text{
+    text-align:center;
+    color:gold;
+    font-size:clamp(2rem,5vw,3rem);
+    animation:fire 1000ms ease-in infinite alternate;
+    display:none;
+}
+@keyframes fire{
+    0%{
+        text-shadow: 5px -50px 100px var(--bg-secondary) ;
+    }
+    50%{
+        text-shadow:5px 50px 100px red;
+    }
+    100%{
+        text-shadow:5px 65px 100px var(--bg-secondary) ;
+    }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Number Guessing Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="confetti">
+      
+    </div>
+    <div class="wrapper">
+        <div class="container">
+            <h1 class="title">Guess the Correct Number</h1>
+            <div id="game">
+                <h3 class="game__title"> Number between <span class="min-number"></span> and <span class="max-number"></span></h3> 
+                <div>
+                <input type="number" class="input">
+                <input type="submit" name="play" class="btn" id="btn" value="Find">
+                </div>
+                <div class="result" id="result">
+                     <p></p>
+                </div>
+            </div>
+            <h2 class="congrats__text">Congratulations</h2>
+          
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
