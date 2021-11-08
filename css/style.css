@@ -27,7 +27,7 @@ body{
 
 }
 .confetti{
-    background-image:url('gif.gif');
+    background-image:url('../img/gif.gif');
     position:fixed;
     top:0;
     left:0;
